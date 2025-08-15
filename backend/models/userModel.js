@@ -1,13 +1,13 @@
-const db = require('mysql2/promise');
+const mongoose = require('mongoose');
 
-const pool = db.createPool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+const userSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  // Thêm các trường khác nếu cần
 });
 
+const User = mongoose.model('User', userSchema);
+
 exports.getAllUsers = async () => {
-  const [rows] = await pool.query('SELECT * FROM users');
-  return rows;
+  return await User.find();
 };
