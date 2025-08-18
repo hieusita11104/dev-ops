@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 // Kết nối MongoDB
-const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/erp';
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://duchieu111004:FcpoaDqMjc6fWXq8@cluster0.h4i6v0e.mongodb.net';
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,

@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/erp';
+const mongoURI = process.env.MONGO_URI || 'mongodb+srv://duchieu111004:FcpoaDqMjc6fWXq8@cluster0.h4i6v0e.mongodb.net';
 
 const productSchema = new mongoose.Schema({
   name: String,
